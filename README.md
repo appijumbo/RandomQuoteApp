@@ -1,6 +1,6 @@
 # RandomQuoteApp
 
-You can find this one at http://codepen.io/tom_o/pen/dGjyqW or https://github.com/appijumbo/RandomQuoteApp
+You can find this one at http://codepen.io/tom_o/pen/dGjyqW or https://appijumbo.github.io/RandomQuoteApp/
 
 Objective: Build a CodePen.io app that is functionally similar to this: http://codepen.io/FreeCodeCamp/full/bELoPJ.
 
