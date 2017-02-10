@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Machine v1</title>
+  <meta charset="UTF-8">
+    <title>Quote Machine v11</title>
+    <meta name="description" content="Random Quote machine app to fufill Free Code Camp Zipline">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<body>
+   
+<main class="page">
+   
+   <section>
+         
+         <svg id="menuButton" xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewbox="0 0 100 100"><path d="m 13.925167,81.443055 69.749463,0 0,-10.42304 -69.749463,0 0,10.42304 z m 0,-26.0576 69.749463,0 0,-10.423039 -69.749463,0 0,10.423039 z m 0,-36.480637 0,10.423039 69.749463,0 0,-10.423039 -69.749463,0 z" fill="#f3f3f3"/></svg>
+         
+          <div class="quoteBubble">
+           <p id="quoteText" class="quote"></p>
+    </div> <!-- End of quoteBubble  -->
+          
+           <div class="author">
+               <p id="authorName"></p>
+               <p id="authorInfo"></p>
+            </div>
+    </section>
+
+       <section id="buttons">
+            <div id="buttonstoggle" class="insideBox">   
+           
+        <svg id="deleteThisQuote" class="button" xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewbox="0 0 100 100"><path d="m 29.695686,74.41109 c 0,3.849365 3.039937,6.955875 6.781397,6.955875 l 27.00867,0 c 3.74146,0 6.7814,-3.10651 6.7814,-6.888341 l 0,-41.600165 -40.571467,0 0,41.532631 z m 43.962167,-52.000206 -11.80899,0 -3.3907,-3.511703 -16.95349,0 -3.33224,3.376638 -11.984367,0 0,7.023404 47.352867,0 0,-6.888339 z" fill="#f3f3f3"/></svg>
+           
+         
+        <a id="tweetThisQuote"><svg class="button" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100"><path d="M88.5 26.12c-2.833 1.256-5.877 2.105-9.073 2.486 3.26-1.955 5.767-5.05 6.945-8.738-3.052 1.81-6.434 3.126-10.03 3.832-2.882-3.068-6.988-4.988-11.532-4.988-8.724 0-15.798 7.072-15.798 15.798 0 1.237.14 2.444.41 3.6-13.13-.658-24.77-6.948-32.562-16.507-1.36 2.334-2.14 5.05-2.14 7.943 0 5.48 2.79 10.315 7.03 13.15-2.59-.084-5.026-.795-7.156-1.977-.002.065-.002.13-.002.198 0 7.652 5.445 14.037 12.67 15.49-1.324.36-2.72.553-4.16.553-1.02 0-2.008-.097-2.973-.282 2.01 6.275 7.843 10.844 14.756 10.972-5.407 4.236-12.218 6.763-19.62 6.763-1.275 0-2.532-.074-3.77-.22 6.992 4.48 15.296 7.095 24.217 7.095 29.058 0 44.948-24.07 44.948-44.945 0-.684-.015-1.367-.045-2.046 3.09-2.226 5.768-5.01 7.885-8.177z" fill="#f3f3f3"/></svg></a>
+           
+            
+            
+        <svg id="addAnotherQuote" class="button" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100"><path d="M84.4 39.7h-24v-24c0-1-1-2-2-2h-17c-1 0-1.7 1-1.7 2v24h-24c-1 0-2 1-2 1.8v17c0 .4.2 1 .6 1.2.3.4.8.6 1.3.6h24v24c0 .6.3 1 .7 1.4.3.4.8.6 1.2.6h17c.4 0 1-.2 1.2-.6.4-.3.6-.8.6-1.3v-24h24c.6 0 1-.3 1.4-.7.3-.3.5-.7.5-1.2v-17c0-1-.8-1.8-1.8-1.8z" fill="#f3f3f3"/></svg>
+          
+          
+        <svg id="rndQuote" class="button" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100"><path d="M17.6 43.7c-.8 0-1.6 0-2 .3 1-3.6 4.3-7.6 7.5-9.4h1c.3-.2.6-.6.6-1s-.3-.7-.5-1L19 30l-.6-.2H18C11.5 34.4 7.4 41.2 7.4 49c0 6.4 4.2 10.2 9 10.2 4.3 0 8-3.7 8-8 0-4.4-3-7.3-7-7.3zm20.4 0c-.7 0-1.5 0-2 .3 1-3.6 4.4-7.6 7.6-9.4.5-.2.7-.6.7-1s-.2-.7-.5-1L39.6 30l-.7-.2h-1C32 34.4 28 41.2 28 49c0 6 4.3 10 9 10 4.3 0 8-3.7 8-8 0-4.4-3-7.3-7-7.3zM63 41c-4.3 0-8 3.7-8 8 0 4.4 3 7.3 7 7.3.7 0 1.5 0 2-.3-1 3.6-4.4 7.6-7.6 9.4-.5.2-.7.6-.7 1s.2.7.5 1l4.2 2.6.7.2h1c6-4.6 10-11.4 10-19.2 0-6-4-10-9-10zm20.5 0c-4.3 0-8 3.7-8 8 0 4.4 3 7.3 7 7.3.7 0 1.5 0 2-.3-1 3.6-4.4 7.6-7.6 9.4h-1c-.4.2-.7.6-.7 1s.3.7.5 1l5 2.6.5.2h.5c7-4.5 11-11.2 11-19 0-6.4-4-10.2-9-10.2z" fill="#f3f3f3"/></svg>
+           
+            </div> <!-- End of insideBox  -->
+    </section>  <!-- End of box  -->
+
+</main><!-- End of page  -->
+
+
+<!-- OVERLAY form for inputing new quotes   -->
+
+<section id="newQuote" class="modal off">
+        
+          <form>
+           <svg id="closeButton" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewbox="0 0 20 20" ><path d="M20 15.3L14.4 10 20 4.8V4L16 .4c-.3-.3-.7-.3-1 0l-5 5.2L4.7.3C4.5 0 4 0 4 .3L0 4c-.2 0-.2.2-.2.4v.4L5.6 10 0 15.3v.8l4 4c.2.3.3.3.5.3L5 20l5-5.3 5.4 5.3h.8l3.8-4c.3-.2.3-.5 0-.7z" fill="#b22222"/></svg>
+            
+            <label>Quote text (max 93 char)
+              <textarea id="quoteTextInput" placeholder="e.g. it's better to make a few people really happy than to make a lot of people semi-happy" maxlength="93" cols="20" rows="5"></textarea>
+            </label>
+          
+          <br>
+          
+          <label>Author's name (max 20 char)<br>
+          <input id="authorNameInput" type="text"  name="AuthorsName" maxlength="20"  size="20" placeholder=" eg. P Buchheit">
+           </label>
+          
+          <br><br>
+          
+          <label>Brief (max 20 char)
+          <input id="authorInfoInput" type="text" name="brief"  size="20" maxlength="20" placeholder=" eg. Gmail creator">
+           </label>
+          
+          <br>
+          
+          <input type="button" value="Add Quote" id="submittQuoteButton">
+        </form>
+    
+    </section> <!-- End of newQuote -->
+
+
+</body>
+<script src="./js/main.js"></script>
+</html>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

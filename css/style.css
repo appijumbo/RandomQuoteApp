@@ -1,0 +1,1494 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:url("https://dl.dropboxusercontent.com/s/f7vyfad4sg0e4vx/handmadepaper_%402X.png?dl=0"); 
+    
+    background-size: auto;
+    font-family: 'Nothing You Could Do', cursive;
+    font-weight: 400;
+    color: #0000ac;
+    font-size: 1.3vmin;
+}
+
+
+.page{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vh;
+    max-height: 100vh; 
+    
+}
+
+
+.insideBox{
+    display: flex;
+    position: absolute; /* remove to put in centre  */
+    bottom: 22vh;  /* remove to put in centre  */
+    /* flex-direction: row; */
+    flex-wrap:wrap;
+    /* position: fixed; */
+    
+    
+    /* width: 80vw; */
+    min-width: 150px;
+    /* left: 5vw; */
+    /* bottom: 2vh; */
+    margin-left: 37vw;
+}
+
+#menuButton{
+    display: block;
+    position: absolute;
+    bottom: 13vh;
+    right: 15vw;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    border: 5px solid #6a6a6a;
+    box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.5);
+    border-radius: 50%;
+    background-color: #6a6a6a;
+    z-index: 2;
+    
+}
+
+
+.button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.5);
+    /* border: solid #4b4b4b; */
+    border-radius: 50%;
+    background-color: #8140b1;
+    /*margin-left: 4vw;
+    margin-right: 4vw; */
+    margin-left: 3vmax;
+    margin-right: 3vmax;
+    margin-bottom: 3vh;
+    transition: all 0.2S ease-in-out;
+    z-index: 2;
+}
+
+
+.button:hover{
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 25px 52px 0px rgba(0,0,0,0.5);
+    z-index: 5;
+}
+
+
+img.button, svg.button{
+    padding: 10px;
+}
+
+
+.quoteBubble{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10vh;
+    font-size: 20px;
+    transform: rotate(-9deg);
+    width: 70%;
+    padding-top: 2em;
+    padding-bottom: 5em;
+    border-image: url("https://dl.dropboxusercontent.com/s/tvwz0311ndjuvpx/quoteBublev2_opt.svg?dl=0") 0 4 1 0 fill stretch;
+    z-index: 1;
+}
+
+
+p{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.author{
+    justify-content: flex-end;
+    width: 60em;
+    margin-left: 15%;
+    margin-right: auto;
+}
+
+
+.author p:nth-child(1){
+    font-size: 20px;
+    padding-top: 3.5vh;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 20px;
+}
+
+
+/********* NEW QUOTE FORM  ******/
+
+.modal{
+    display: flex;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.06);
+    z-index: 1;
+    /* opacity: 0; */
+    font-size: 32px;
+    color: blue;
+    margin: none;
+    min-width: 100vw;
+    max-width: 400px;
+    max-height: 100vh;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    
+ }
+
+
+/*  Make sure as this is an option that it's cascaded below 'modal' class  */
+.is-open{ 
+    z-index: 1;
+    /* opacity: 1; */
+    background:url("https://dl.dropboxusercontent.com/s/f7vyfad4sg0e4vx/handmadepaper_%402X.png?dl=0"); 
+    background-size: auto;
+    pointer-events: auto;
+}
+
+
+    
+textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 1em;
+    
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(234, 220, 146, 0.76);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    font-size: 1em;
+ 
+}
+
+
+form label{
+    padding: 0;
+    font-size: 1em;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 0.8em;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 26px;
+    width: 200px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 7vh;
+    height: 100px;
+    border: solid;
+    border-radius: 50px;
+    color: firebrick;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+
+form input[type="button"]:hover {
+    transform: scale(1.2);
+    
+}
+
+
+svg#closeButton{
+    position: absolute;
+    top: -60px;
+    left: 400px;
+    border: solid;
+    padding: 5px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+svg#closeButton:hover {
+    transform: scale(1.4);
+    z-index: 7;
+}
+
+
+.off{
+    display: none;
+}
+
+
+
+
+
+/********  MEDIA QUERY 320px 399px port *************/
+/*************************************/
+
+
+@media only screen and (min-width: 320px) and (max-width: 399px), handheld and (orientation: portrait) {
+    
+    .author p:nth-child(1){
+    font-size: 16px;
+    padding-top: 3.5vh;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 16px;
+}
+    
+    .button:hover{
+}
+    
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 20px;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 320px;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 3vh;
+    font-size: 25px;
+ 
+}
+
+
+form label{
+    padding: 0;
+    font-size: 16px;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 20px;
+    margin-bottom: 1vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+svg#closeButton{
+    position: absolute;
+    top: 80vh;
+    left: 65vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+  
+    
+input#submittQuoteButton{
+    font-size: 16px;
+    position: absolute;
+    left: 16vw;
+    margin: 0px;
+    width: 140px;
+}    
+    
+
+}
+
+
+
+
+
+
+
+
+/********  MEDIA QUERY 530px 650px Landscape *************/
+/*************************************/
+
+
+@media only screen and (min-width: 530px) and (max-width: 650px), handheld and (orientation: landscape) {
+    
+    .author p:nth-child(1){
+    font-size: 16px;
+    padding-top: 3.5vh;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 16px;
+}
+    
+    .button:hover{
+}
+    
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 25px;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 320px;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 3vh;
+    font-size: 25px;
+ 
+}
+
+
+form label{
+    padding: 0;
+    font-size: 20px;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 25px;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 25px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+svg#closeButton{
+    position: absolute;
+    top: 80vh;
+    left: 65vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+  
+    
+input#submittQuoteButton{
+    font-size: 18px;
+    position: absolute;
+    left: 7vw;
+    margin: 6px;
+}    
+    
+
+}
+
+
+
+
+
+/********  MEDIA QUERY 400px - 590px port  *************/
+/*************************************/
+
+
+
+@media only screen and (min-width: 400px) and (max-width: 590px), handheld and (orientation: portrait) {
+     
+
+.quoteBubble{
+    margin-top: 10vh;
+    padding-bottom: 4em;
+    font-size: 25px; 
+}
+    
+
+
+.author p:nth-child(1){
+    font-size: 25px;
+    padding-top: 3.5vh;
+}
+
+    
+
+.author p:nth-last-child(1){
+    font-size: 25px;
+}
+
+
+    
+.insideBox{
+        display: flex;
+        position: absolute; /* remove to put in centre  */
+        bottom: 10vh;  /* remove to put in centre  */
+        flex-wrap:wrap;
+        min-width: 150px;
+        margin-left: 20vw;
+        margin-right: 15vw;
+}
+    
+    
+
+textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 20px;
+    width: 16em;
+    height: 6em;
+}
+
+
+    
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+    
+form {
+    position: relative;
+    flex-direction: column;
+    width: 70vw;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 12vh;
+    font-size: 30px;
+ 
+}
+
+
+    
+form label{
+    padding: 0;
+    font-size: 20px;
+}
+
+
+    
+form input {
+    background-color: beige;
+    font-size: 20px;
+    margin-bottom: 3vh;
+}
+
+    
+
+form input[type="text"] {
+    flex: 1;
+}
+
+    
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+svg#closeButton{
+    position: fixed;
+    top: 2vh;
+    left: 75vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+    
+    
+input#submittQuoteButton{
+    font-size: 18px;
+    margin: 10px;
+    position: absolute;
+    left: 20vw;
+    bottom: 5vh;
+}    
+    
+    
+
+.off{
+    display: none;
+}
+    
+    
+    
+    
+}
+
+
+
+
+
+/********  MEDIA QUERY 530px - 619px port  *************/
+/*************************************/
+
+
+@media only screen and (min-width: 530px) and (max-width: 619px), handheld and (orientation: landscape) {
+    
+
+.quoteBubble{
+   
+    font-size: 20px;
+    width: 70%;
+    padding-bottom: 2em;
+}
+
+
+.author p:nth-child(1){
+    font-size: 20px;
+    padding-top: 1.5em;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 20px;
+}
+    
+    
+.insideBox{
+    display: flex;
+    position: absolute; /* remove to put in centre  */
+    bottom: 31vh;  /* remove to put in centre  */
+    flex-wrap:wrap;
+    min-width: 150px;
+    margin-left: 15vw;
+}
+    
+    
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 18px;
+    width: 25em;
+    height: 4em;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 320px;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 3vh;
+    font-size: 18px;
+ 
+}
+
+
+form label{
+    padding: 0;
+    font-size: 18px;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 18px;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+svg#closeButton{
+    position: absolute;
+    top: 60vh;
+    left: 80vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+    
+    
+input#submittQuoteButton{
+    font-size: 18px;
+    margin: 10px;
+    position: absolute;
+    left: 45vw;
+    bottom: 15vh;
+}    
+    
+    
+
+.off{
+    display: none;
+}
+    
+
+}
+
+
+
+
+
+
+
+/********  MEDIA QUERY 591px - 749px *************/
+/*************************************/
+
+
+@media only screen and (min-width: 591px) and (max-width: 749px), handheld and (orientation: portrait) {
+    
+    
+
+.quoteBubble{
+    margin-top: 10vh;
+    padding-bottom: 4em;
+    font-size: 35px; 
+}
+    
+
+
+.author p:nth-child(1){
+    font-size: 40px;
+    padding-top: 3.5vh;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 40px;
+}
+
+.insideBox{
+    position: absolute; /* remove to put in centre  */
+    bottom: 30vh;  /* remove to put in centre  */
+    flex-wrap:wrap;
+    min-width: 150px;
+    margin-left: 12vw;
+}
+    
+
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 30px;
+    width: 16em;
+    height: 6em;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 60vw;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 12vh;
+    font-size: 30px;
+ 
+}
+
+
+form label{
+    padding: 0;
+    font-size: 30px;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 30px;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 30px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+svg#closeButton{
+    position: fixed;
+    top: 2vh;
+    left: 75vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+    
+    
+input#submittQuoteButton{
+    font-size: 18px;
+    margin: 10px;
+    position: absolute;
+    left: 25vw;
+    bottom: 15vh;
+}    
+    
+    
+
+.off{
+    display: none;
+}
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+/********  MEDIA QUERY 620px - 799px LANDSCAPE  *************/
+/*************************************/
+
+
+@media only screen and (min-width: 598px) and (max-width: 899px), handheld and (orientation: landscape) {
+    
+
+.quoteBubble{
+   
+    font-size: 22px;
+    width: 80%;
+    padding-bottom: 2em;
+}
+
+
+.author p:nth-child(1){
+    font-size: 20px;
+    padding-top: 1.5em;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 20px;
+}
+    
+    
+.insideBox{
+    display: flex;
+    position: absolute; /* remove to put in centre  */
+    bottom: 20vh;  /* remove to put in centre  */
+    flex-wrap:wrap;
+    min-width: 150px;
+    margin-left: 15vw;
+}
+    
+    
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 18px;
+    width: 29em;
+    height: 3em;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 320px;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 3vh;
+    font-size: 20px;
+ 
+}
+
+
+form label{
+    padding: 0;
+    font-size: 20px;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 20px;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 25px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+svg#closeButton{
+    position: absolute;
+    top: 60vh;
+    left: 80vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+    
+    
+input#submittQuoteButton{
+    font-size: 18px;
+    margin: 10px;
+    position: absolute;
+    left: 45vw;
+    bottom: 15vh;
+}    
+    
+    
+
+.off{
+    display: none;
+}
+    
+
+}
+
+
+
+
+/********  MEDIA QUERY 750px - 1099px *************/
+/*************************************/
+
+
+@media only screen and (min-width: 750px) and (max-width: 1099px), handheld and (orientation: portrait) {
+    
+    
+
+.quoteBubble{
+    margin-top: 10vh;
+    font-size: 40px; 
+}
+    
+
+
+.author p:nth-child(1){
+    font-size: 40px;
+    padding-top: 3.5vh;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 40px;
+}
+
+.insideBox{
+    position: absolute; /* remove to put in centre  */
+    bottom: 20vh;  /* remove to put in centre  */
+    flex-wrap:wrap;
+    min-width: 150px;
+    margin-left: 15vw;
+}
+
+    
+    
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 30px;
+    width: 20em;
+    height: 5em;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 80vw;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 13vh;
+    font-size: 30px;
+ 
+}
+
+.label{
+        margin-top: 5vh;
+}
+
+    
+form label{
+    padding: 0;
+    font-size: 35px;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 30px;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 30px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+svg#closeButton{
+    position: absolute;
+    top: 60vh;
+    left: 60vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+    
+    
+input#submittQuoteButton{
+    font-size: 18px;
+    margin: 10px;
+    position: absolute;
+    left: 25vw;
+    bottom: 15vh;
+}    
+    
+    
+
+.off{
+    display: none;
+}
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********  MEDIA QUERY 900px  Landscape *************/
+/*************************************/
+
+
+@media only screen and (min-width: 900px), handheld and (orientation: landscape) {
+    
+
+.quoteBubble{
+   
+    font-size: 35px;
+    width: 80%;
+    padding-bottom: 2em;
+}
+
+
+.author p:nth-child(1){
+    font-size: 35px;
+    padding-top: 1.5em;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 35px;
+}
+    
+    
+.insideBox{
+   
+    bottom: 27vh;  /* remove to put in centre  */
+}
+    
+    
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 30px;
+    width: 25em;
+    height: 4em;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    position: relative;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 7vh;
+    margin-right: auto;
+    margin-top: 10vh;
+    font-size: 0px;
+ 
+}
+
+
+form label{
+    padding: 0;
+    font-size: 30px;
+}
+
+
+form input {
+    background-color: beige;
+    font-size: 30px;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    font-size: 30px;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+svg#closeButton{
+    position: absolute;
+    bottom: 10vh;
+    left: 70vw;
+    border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+}
+
+    
+    
+input#submittQuoteButton{
+    font-size: 18px;
+    margin: 10px;
+    position: absolute;
+    left: 35vw;
+    bottom: 15vh;
+}    
+    
+    
+
+.off{
+    display: none;
+}
+    
+
+}
+
+
+
+
+
+
+/********  MEDIA QUERY 1100px or GREATER  *********/
+/*************************************/
+
+
+@media only screen and (min-width: 1100px) {
+    
+
+.page{
+    padding-top: 6vh;
+    
+}
+
+    
+#buttonstoggle.insideBox{
+    
+    margin: auto;
+    left: 30vw;
+    
+}
+    
+
+.quoteBubble{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5vh;
+    font-size: 33px;
+    transform: rotate(-9deg);
+    width: 70%;
+    padding-top: 2em;
+    padding-bottom: 5em;
+    border-image: url("https://dl.dropboxusercontent.com/s/tvwz0311ndjuvpx/quoteBublev2_opt.svg?dl=0") 0 4 1 0 fill stretch;
+    z-index: 1;
+}
+    
+
+
+.author p:nth-child(1){
+    font-size: 40px;
+    padding-top: 3.5vh;
+}
+
+
+.author p:nth-last-child(1){
+    font-size: 40px;
+}
+
+.insideBox{
+    display: flex;
+    position: absolute; /* remove to put in centre  */
+    bottom: 5vh;  /* remove to put in centre  */
+    flex-wrap:wrap;
+    min-width: 150px;
+    margin: auto;
+}
+    
+   
+    textarea {
+    background-color: beige;
+    resize: none;  /* remove resize handle */
+    overflow: auto; /* remove IE scrollbars  */
+    outline: inherit;
+    margin-bottom: 3vh;
+    font-size: 30px;
+    width: 29em;
+    height: 3em;
+}
+
+
+textarea:focus, form input:focus {
+    background: rgba(144, 128, 212, 0.35);
+    outline: none !important;
+    border:1px solid #ac9200;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+form {
+    margin: auto;
+    margin-top: 20vh;
+    width: 40vw;
+ 
+}
+
+
+form label{
+    padding: 0;
+}
+
+
+form input {
+    background-color: beige;
+    margin-bottom: 3vh;
+}
+
+
+form input[type="text"] {
+    flex: 1;
+}
+
+
+form input[type="button"] {
+    text-transform: uppercase;
+    width: 170px;
+    height: 70px;
+    border: solid 10px;
+    border-radius: 80px;
+    color: #f5f5f5;
+    background-color: firebrick;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+svg#closeButton{
+    position: fixed;
+    top: 65vh;
+    left: 60vw;
+    /* border: solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #b22222;
+    z-index: 6;
+    transition: all 0.2s cubic-bezier(0.24,-0.04, 0, 2.35); */
+}
+
+    
+    
+input#submittQuoteButton{
+    position: fixed;
+    font-size: 18px;
+    left: 45vw;
+    bottom: 25vh;
+    /* margin: 10px;
+    position: absolute;
+    left: 37vw;
+    bottom: 15vh; */
+}    
+    
+    
+
+.off{
+    display: none;
+}
+
+}
