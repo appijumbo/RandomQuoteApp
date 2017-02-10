@@ -1,8 +1,8 @@
 # RandomQuoteApp
 
-A Pen created at CodePen.io. You can find this one at http://codepen.io/tom_o/pen/dGjyqW.
+You can find this one at http://codepen.io/tom_o/pen/dGjyqW or https://github.com/appijumbo/RandomQuoteApp
 
- Objective: Build a CodePen.io app that is functionally similar to this: http://codepen.io/FreeCodeCamp/full/bELoPJ.
+Objective: Build a CodePen.io app that is functionally similar to this: http://codepen.io/FreeCodeCamp/full/bELoPJ.
 
 User Story: I can click a button to show me a new random quote.
 User Story: I can press a button to tweet out a quote.
