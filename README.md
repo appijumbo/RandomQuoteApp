@@ -1,10 +1,28 @@
+
 # RandomQuoteApp
 
-You can find this one at http://codepen.io/tom_o/pen/dGjyqW or https://appijumbo.github.io/RandomQuoteApp/
+The calculater has its own [gihub page](https://appijumbo.github.io/calculatorAppv1/)
 
-Objective: Build a CodePen.io app that is functionally similar to this: http://codepen.io/FreeCodeCamp/full/bELoPJ.
+<a href="https://appijumbo.github.io/RandomQuoteApp/"><img src="./extras/randQ.jpg" width="400"></a>
 
-User Story: I can click a button to show me a new random quote.
-User Story: I can press a button to tweet out a quote.
 
-I also included the ability to add and delete quotes,. These are stored in localStorage and therefore do not delete from the browser unless specifically deleted. You can also tweet a quote. The design should be reasonably responsive too.
+
+## Objective
+
+Build a CodePen.io app that is functionally similar to this: http://codepen.io/FreeCodeCamp/full/bELoPJ.
+
+USer story
+
+  * click a button to show me a new random quote.
+  * press a button to tweet out a quote.
+
+## Add and remove quotes and keep them even when power is off
+I decided to make the spec more difficult and intresting by also includeding the ability to add and delete quotes. These are stored in localStorage and therefore do not delete from the browser unless specifically deleted. 
+
+## Tweetable quotes
+You can also tweet a quote. 
+
+
+## A responsive design
+The design should be reasonably responsive and be suitable for use on a desktop wallpaper if a screen dump were taken by the user.
+
