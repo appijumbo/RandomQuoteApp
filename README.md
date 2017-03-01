@@ -1,11 +1,7 @@
 
-# RandomQuoteApp
-
-The calculater has its own [gihub page](https://appijumbo.github.io/calculatorAppv1/)
+# [RandomQuoteApp](https://appijumbo.github.io/calculatorAppv1/)
 
 <a href="https://appijumbo.github.io/RandomQuoteApp/"><img src="./extras/randQ.jpg" width="400"></a>
-
-
 
 ## Objective
 
