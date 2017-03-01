@@ -1,3 +1,6 @@
+
+
+
 var quoteArray = [];
 
 var quoteNumber = null;   /* the element position in the array that is the quote being displayed */
@@ -272,3 +275,5 @@ window.onload = function(){
     setUpScan();   
     
 };
+
+
