@@ -7,7 +7,7 @@
 
 Build a CodePen.io app that is functionally similar to this: http://codepen.io/FreeCodeCamp/full/bELoPJ.
 
-USer story
+User story
 
   * click a button to show me a new random quote.
   * press a button to tweet out a quote.
