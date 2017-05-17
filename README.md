@@ -13,7 +13,7 @@ User story
   * press a button to tweet out a quote.
 
 ## Add and remove quotes and keep them even when power is off
-I decided to make the spec more difficult and intresting by also includeding the ability to add and delete quotes. These are stored in localStorage and therefore do not delete from the browser unless specifically deleted. 
+I decided to make the spec more difficult and interesting by also including the ability to add and delete quotes. These are stored in localStorage and therefore do not delete from the browser unless specifically deleted. 
 
 ## Tweetable quotes
 You can also tweet a quote. 
